@@ -8,4 +8,6 @@
         - uses: actions/setup-node@v3
           with:
             node-version-file: .nvmrc
+            cache: 'npm'
+        - run: npm ci
         - run: npx @redocly/cli@1.0.0-beta.121 lint openapi.yaml
